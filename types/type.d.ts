@@ -66,7 +66,7 @@ declare interface ButtonProps extends TouchableOpacityProps {
 declare interface GoogleInputProps {
   icon?: string;
   initialLocation?: string;
-  containerStyle?: string;
+  containerStyle?: object | string;
   textInputBackgroundColor?: string;
   handlePress: ({
     latitude,
@@ -83,10 +83,10 @@ declare interface InputFieldProps extends TextInputProps {
   label: string;
   icon?: any;
   secureTextEntry?: boolean;
-  labelStyle?: string;
-  containerStyle?: string;
-  inputStyle?: string;
-  iconStyle?: string;
+  labelStyle?: StyleProp<TextStyle>; // Can be either string (tailwind) or TextStyle (object)
+  containerStyle?: StyleProp<ViewStyle>; // Can be either string (tailwind) or ViewStyle (object)
+  inputStyle?: StyleProp<TextStyle | ViewStyle>; // Can be either string or TextStyle/ViewStyle (object)
+  iconStyle?: StyleProp<ImageStyle>;
   className?: string;
 }
 
