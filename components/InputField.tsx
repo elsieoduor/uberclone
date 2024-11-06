@@ -11,6 +11,7 @@ import {
 } from "react-native";
 
 import { InputFieldProps } from "@/types/type";
+import React from "react";
 
 const InputField = ({
   label,
